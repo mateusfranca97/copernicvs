@@ -1,16 +1,9 @@
-const menuLinks = document.querySelectorAll('.scroll-efect a[href^="#"]');
+const menuLinks = document.querySelectorAll('.scroll-effect a[href^="#"]');
 
 function getDistanceFromTheTop(element) {
   const id = element.getAttribute("href");
   return document.querySelector(id).offsetTop;
 }
-
-// function nativeScroll(distanceFromTheTop) {
-//   window.scroll({
-//     top: distanceFromTheTop,
-//     behavior: "smooth",
-//   });
-// }
 
 function scrollToSection(event) {
   event.preventDefault();
