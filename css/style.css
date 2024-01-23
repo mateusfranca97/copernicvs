@@ -111,15 +111,15 @@ figure .carousel-inner {
   -webkit-backdrop-filter: blur(4.5px);
 }
 
-section .card .card-title{
+section .card .card-title {
   font-size: 1.5rem;
 }
 
-section .card .card-subtitle{
+section .card .card-subtitle {
   font-size: 1rem;
 }
 
-.card:hover{
+.card:hover {
   background: linear-gradient(rgba(204, 40, 40, 0), rgba(255, 255, 255, 0)) padding-box,
     linear-gradient(146deg, rgba(79, 79, 79, 0.259), rgba(36, 36, 36, 0)) border-box;
 }
@@ -207,7 +207,7 @@ a.button-link {
 }
 
 .offcanvas-end {
-  background-color:  rgb(42, 42, 42) !important;
+  background-color: rgb(42, 42, 42) !important;
 
 }
 
@@ -297,13 +297,17 @@ a.button-link {
 
 /*----------STACK CONTAINER----------*/
 
-.stack-container-item{
+.stack-container-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.stack-item{
+.second-col{
+  margin-top: -13rem;
+}
+
+.stack-item {
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -311,11 +315,11 @@ a.button-link {
 }
 
 
-figure .stack-title{
+figure .stack-title {
   height: 1rem;
 }
 
-figure .stack-img{
+figure .stack-img {
   height: 3rem;
   width: 3rem;
 }
@@ -346,7 +350,6 @@ figure .stack-img{
   font-family: sans-serif;
   font-size: 50px;
   font-style: normal;
-
 }
 
 .card-edit h5 {
@@ -438,6 +441,11 @@ figure .stack-img{
 footer .container-footer {
   display: flex;
   justify-content: center;
+}
+
+.cards-slide-container {
+  width: 95vw;
+  margin: 2rem;
 }
 
 .separator {
@@ -583,9 +591,8 @@ a:hover {
   }
 
   .card {
-    min-width:21rem ;
-    padding: 0;
-    height: auto;
+    min-width: 21rem;
+    height: 15rem;
   }
 
   .card img {
@@ -632,7 +639,7 @@ a:hover {
 }
 
 
-@media only screen and  (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .nav-container {
     width: 100%;
     margin: 0;
@@ -649,39 +656,44 @@ a:hover {
   }
 
   .icons-img img {
-  height: 4rem;
-}
+    height: 4rem;
+  }
 
   .card {
     min-height: 30rem;
     max-height: 20rem;
-    height: 30rem;
   }
 
 }
 
 @media only screen and (max-width: 425px) {
 
-  header{
+  header {
     width: 100%;
   }
 
-  .logo{
+  .logo {
     height: 10rem;
     width: 12rem;
-    border-right: none;
-    border-top: 1px solid #F71364;
-    transform: rotate(90deg);
+    border-right: 1px solid #F71364;
   }
 
-  .footer-logo{
+  .footer-logo {
     height: 20rem;
+  }
+  
+  .second-col{
+    margin-top: -10rem;
+  }
+
+  .cards-slide-container {
+    margin: 0rem;
   }
 
   article {
     height: 20rem;
   }
-  
+
   .card {
     min-height: 26rem;
     max-height: 15rem;
@@ -699,6 +711,81 @@ a:hover {
   }
 }
 
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-right-color: #ffffff;
+  animation: spinner-a4dj62 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: spinner-a4dj62 2s infinite;
+}
+
+.spinner::after {
+  margin: 8.9px;
+  animation-duration: 3s;
+}
+
+.shadow {
+  position: relative;
+  filter: drop-shadow(0px 0px 200px #F71364) drop-shadow(0px 0px 50px #F71364);
+  -webkit-filter: blur(80px);
+}
+
+.position-circle-1{
+  right: 10rem;
+  bottom: 5rem;
+}
+
+.position-circle-2{
+  left: 10rem;
+  top: 5rem;
+  bottom: 5rem;
+}
+
+.position-circle-3{
+  left: 10rem;
+  bottom: 5rem;
+}
+
+.circle-wrapper-1 {
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  clip-path: circle(50% at 50% 50%);
+  background-color: rgba(151, 71, 255, 0.1);
+}
+
+.circle-wrapper-2 {
+  width: 10rem;
+  height: 10rem;
+  clip-path: circle(50% at 50% 50%);
+  background-color: rgba(247, 19, 99, 0.2);
+}
+
+.circle-wrapper-3 {
+  width: 15rem;
+  height: 15rem;
+  clip-path: circle(50% at 50% 50%);
+  background-color: rgba(247, 19, 99, 0.2);
+}
+
+@keyframes spinner-a4dj62 {
+  100% {
+     transform: rotate(1turn);
+  }
+}
+
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -706,15 +793,15 @@ a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: black; 
+  background: black;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #555; 
+  background: #555;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #F71364; 
+  background: #F71364;
 }
